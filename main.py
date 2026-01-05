@@ -1,12 +1,4 @@
-import curses.ascii
+str1 = "James"
 
-str1 = "P@#yn26at^&i5ve"
-
-def devide(bogstaver):
-    alfa = curses.ascii.isalpha(bogstaver)
-    tal = curses.ascii.isdigit(bogstaver)
-
-    print(alfa)
-    print(tal)
-
-print(devide(str1))
+result = str1[0] + str1[2] + str1[4]
+print(result)
