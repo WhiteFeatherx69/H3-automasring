@@ -1,0 +1,16 @@
+{
+  "pairs": [
+    {
+      "q": "2 + 2",
+      "a": "4"
+    },
+    {
+      "q": "hvad hedder du",
+      "a": "dit navn er gummi"
+    },
+    {
+      "q": "hej",
+      "a": "hvad hedder du"
+    }
+  ]
+}
