@@ -1,33 +1,12 @@
-import requests
+import curses.ascii
 
-MODEL = "llama3.2:latest"
+str1 = "P@#yn26at^&i5ve"
 
-print("DK→EN (lokal LLM via Ollama). Skriv /exit for at stoppe.\n")
+def devide(bogstaver):
+    alfa = curses.ascii.isalpha(bogstaver)
+    tal = curses.ascii.isdigit(bogstaver)
 
-while True:
-    dk = input("DK> ").strip()
-    if not dk:
-        continue
-    if dk.lower() == "/exit":
-        break
+    print(alfa)
+    print(tal)
 
-    r = requests.post(
-        "http://127.0.0.1:11434/api/chat",
-        json={
-            "model": MODEL,
-            "messages": [
-                {"role": "system", "content": "Translate Danish to natural English. Output ONLY the English translation."},
-                {"role": "user", "content": dk},
-            ],
-            "stream": False,
-        },
-        timeout=120,
-    )
-
-    if r.status_code != 200:
-        print("HTTP", r.status_code)
-        print(r.text)
-        continue
-
-    data = r.json()
-    print("EN>", data["message"]["content"].strip(), "\n")
+print(devide(str1))
