@@ -1,1 +1,5 @@
 print("Hello World")
+input()
+print("Hello World")
+input()
+print("Hello World")
