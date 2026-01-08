@@ -12,6 +12,6 @@ alder = int(input("Hvor gammel er du: "))
 if alder >= 18:
     print("Du er over 18")
 else :
-    print("Du er under 18")
+    print("Du er under 18 år")
 
 
