@@ -1,10 +1,24 @@
-import requests
+with open('readme.txt', 'w') as f:
+    f.write('Python is powerful, but sometimes tricky')
 
-url = "https://httpbin.org/headers"
-response = requests.get(url)
+def countA(text):
+    count = 0
+    for c in text:
+        if c == 't':
+            count = count + 1
+    return count
 
-print("=== response.headers ===")
-print(response.headers)
+print(countA("Python is powerful, but sometimes tricky"))
 
-print("\n=== response.text ===")
-print(response.text)
+def reversed_string(a_string):
+    return a_string[::-1]
+print(reversed_string("Python is powerful, but sometimes tricky"))
+
+
+tekst = "Python is powerful, but sometimes tricky."
+
+
+ny_tekst = tekst.replace("Python", "PYTHON")
+
+
+print(ny_tekst)
